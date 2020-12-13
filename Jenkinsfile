@@ -36,22 +36,22 @@ pipeline {
         // }
 
         stage('Acceptance Testing') {
-        steps {
-            parallel(
-            Cookstyle: {
-                sh'echo "Starting cookstyle (rubocop): "'
-                sh'cookstlye'
-                }
-            // FoodCritic: {
-            //     sh'echo "Starting foodcritic: "'
-            //     sh'foodcritic . --tags -FC078'
-            //     },
-            // ChefSpec: {
-            //     sh'echo Starting ChefSpec: '
-            //     sh'chef exec rspec'
-            //     }
-            )
-            }
+        // steps {
+        //     parallel(
+        //     Cookstyle: {
+        //         sh'echo "Starting cookstyle (rubocop): "'
+        //         sh'cookstlye'
+        //         }
+        //     // FoodCritic: {
+        //     //     sh'echo "Starting foodcritic: "'
+        //     //     sh'foodcritic . --tags -FC078'
+        //     //     },
+        //     // ChefSpec: {
+        //     //     sh'echo Starting ChefSpec: '
+        //     //     sh'chef exec rspec'
+        //     //     }
+        //     )
+        //     }
         }
         
         // Spin up a test infrascture and run test kitchen on it.
@@ -68,10 +68,6 @@ pipeline {
         // }
 
         stage('Upload cookbook to Chef Server & Supermarket') {
-            step {
-                sh '''#!/bin/bash
-                '''
-            }
         }
 
         // stage('Upload Profile to Automate'){
