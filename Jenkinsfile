@@ -68,21 +68,8 @@ pipeline {
         // }
 
         stage('Upload cookbook to Chef Server & Supermarket') {
-            when {
-                branch 'master'
-            }
             step {
                 sh '''#!/bin/bash
-                COOKBOOK=$(cat metadata.rb | grep name | awk '{printf $2}' | sed 's/\\x27//g')
-                export $COOKBOOK
-                echo $COOKBOOK
-                echo $WORKSPACE
-                cd ../
-                mkdir -p $WORKSPACE/* $WORKSPACE/cookbooks/$COOKBOOK/ 
-                mv $WORKSPACE/* $WORKSPACE/cookbooks/$COOKBOOK/ | true
-                cd $WORKSPACE/cookbooks/
-                knife cookbook upload $COOKBOOK | true
-                knife supermarket share $COOKBOOK | true
                 '''
             }
         }
