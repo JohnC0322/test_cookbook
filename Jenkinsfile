@@ -6,7 +6,6 @@ pipeline {
     // environment {
     // EXTRA= "your path needs here"
     //   }
-    stages {
         // withEnv(["PATH+EXTRA=$EXTRA"]) { ##this is how you'd add path to this stage
         // sh 'chef shell-init sh' ## this is if chef shell env isn't seeing everything
         // stage('Workstation Verify'){
@@ -93,5 +92,4 @@ pipeline {
         //       sh "rm -rf $WORKSPACE/.* | true"
         //     }
         // }
-    }
 }
