@@ -35,24 +35,24 @@ pipeline {
         //     }
         // }
 
-        stage('Acceptance Testing') {
-        // steps {
-        //     parallel(
-        //     Cookstyle: {
-        //         sh'echo "Starting cookstyle (rubocop): "'
-        //         sh'cookstlye'
-        //         }
-        //     // FoodCritic: {
-        //     //     sh'echo "Starting foodcritic: "'
-        //     //     sh'foodcritic . --tags -FC078'
-        //     //     },
-        //     // ChefSpec: {
-        //     //     sh'echo Starting ChefSpec: '
-        //     //     sh'chef exec rspec'
-        //     //     }
-        //     )
-        //     }
-        }
+        // stage('Acceptance Testing') {
+        // // steps {
+        // //     parallel(
+        // //     Cookstyle: {
+        // //         sh'echo "Starting cookstyle (rubocop): "'
+        // //         sh'cookstlye'
+        // //         }
+        // //     // FoodCritic: {
+        // //     //     sh'echo "Starting foodcritic: "'
+        // //     //     sh'foodcritic . --tags -FC078'
+        // //     //     },
+        // //     // ChefSpec: {
+        // //     //     sh'echo Starting ChefSpec: '
+        // //     //     sh'chef exec rspec'
+        // //     //     }
+        // //     )
+        // //     }
+        // }
         
         // Spin up a test infrascture and run test kitchen on it.
         // stage('Test Kitchen') {
@@ -67,8 +67,8 @@ pipeline {
         //     }
         // }
 
-        stage('Upload cookbook to Chef Server & Supermarket') {
-        }
+        // stage('Upload cookbook to Chef Server & Supermarket') {
+        // }
 
         // stage('Upload Profile to Automate'){
         //     steps{
